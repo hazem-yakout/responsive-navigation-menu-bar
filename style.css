@@ -6,6 +6,10 @@
   font-family: "poppins", "sans-serif";
 }
 
+body {
+  background: #343f4f;
+}
+
 nav {
   height: 80px;
   width: 100%;
@@ -170,4 +174,5 @@ nav #icon {
     font-size: 18px;
   }
 }
+
 
