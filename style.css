@@ -1,219 +1,215 @@
 
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+ 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", "sans-serif";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", "sans-serif";
 }
 
 body {
-  background: #343f4f;
+    background: #343f4f;
 }
 
 nav {
-  height: 80px;
-  width: 100%;
-  background: #34495e;
+    height: 80px;
+    width: 100%;
+    background: #34495e;
 }
 
 label.logo {
-  font-size: 35px;
-  font-weight: bold;
-  color: white;
-  padding: 0 100px;
-  line-height: 80px;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    padding: 0 100px;
+    line-height: 80px;
 }
 
 label span {
-  font-size: 15px;
+    font-size: 15px;
 }
 
 nav ul {
-  float: right;
-  margin-right: 40px;
+    float: right;
+    margin-right: 40px;
 }
 
 nav li {
-  display: inline-block;
-  margin: 0 8px;
-  line-height: 80px;
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
 }
 
 nav a {
-  color: white;
-  font-size: 18px;
-  text-transform: uppercase;
-  border: 1px solid transparent;
-  padding: 7px 10px;
-  border-radius: 3px;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
 }
 
 a.active,
 a:hover {
-  border: 1px solid white;
-  transition: 0.5s;
+    border: 1px solid white;
+    transition: 0.5s;
 }
 
 nav #icon {
-  color: white;
-  font-size: 30px;
-  line-height: 80px;
-  float: right;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
 }
 
 .sec {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Added for better visibility */
 }
 
 .wrapper {
-  display: flex;
+    display: flex;
+    flex-direction: column;
+    /* Adjust direction for smaller screens */
+    align-items: center;
+    /* Center items in column direction */
+    text-align: center;
 }
 
 .wrapper .static-txt {
-  color: #fff;
-  font-size: 60px;
-  font-weight: 400;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
 }
 
 .wrapper .dynamic-txts {
-  margin-left: 15px;
-  height: 90px;
-  line-height: 90px;
-  overflow: hidden;
+    margin-left: 0;
+    /* Remove margin for smaller screens */
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
 }
 
 .dynamic-txts li {
-  list-style: none;
-  color: #fc6d6d;
-  font-size: 60px;
-  font-weight: 500;
-  position: relative;
-  top: 0;
-  animation: slide 12s steps(4) infinite;
+    list-style: none;
+    color: #fc6d6d;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
 }
 
 @keyframes slide {
-  100% {
-    top: -360px;
-  }
+    100% {
+        top: -360px;
+    }
 }
 
 .dynamic-txts li span {
-  position: relative;
-  margin: 5px 0;
-  line-height: 90px;
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
 }
 
 .dynamic-txts li span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #343f4f;
-  border-left: 2px solid #fc6d6d;
-  animation: typing 3s steps(10) infinite;
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #343f4f;
+    border-left: 2px solid #fc6d6d;
+    animation: typing 3s steps(10) infinite;
 }
 
 @keyframes typing {
-  40%,
-  60% {
-    left: calc(100% + 30px);
-  }
-  100% {
-    left: 0;
-  }
+    40%,
+    60% {
+        left: calc(100% + 30px);
+    }
+    100% {
+        left: 0;
+    }
 }
 
-/* Media Queries */
-@media (max-width: 1024px) {
-  label.logo {
-    padding: 0 50px;
-  }
 
-  nav ul {
-    margin-right: 20px;
-  }
+/* Media Queries for Smaller Screens */
 
-  nav #icon {
-    margin-right: 20px;
-  }
-
-  .wrapper .static-txt, .dynamic-txts li {
-    font-size: 50px;
-  }
-
-  .wrapper .dynamic-txts {
-    height: 80px;
-    line-height: 80px;
-  }
+@media (max-width: 600px) {
+    .sec {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .wrapper .static-txt,
+    .dynamic-txts li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 30px;
+        /* Adjust font size for smaller screens */
+        line-height: 45px;
+        /* Adjust line height accordingly */
+    }
+    .dynamic-txts {
+        height: 45px;
+        text-align: end;
+        /* Adjust container height */
+    }
+    .dynamic-txts li span::after {
+        height: 100%;
+        /* Ensure typing animation scales with text size */
+    }
 }
 
 @media (max-width: 768px) {
-  nav ul {
-    display: none;
-  }
-  
-  #icon {
-    display: block;
-  }
+    nav ul {
+        display: none;
+    }
+    #icon {
+        display: block;
+        color: white;
+        font-size: 24px;
+    }
+    #icon i {
+        cursor: pointer;
+    }
+}
 
-  .wrapper .static-txt, .dynamic-txts li {
-    font-size: 40px;
-  }
-
-  .wrapper .dynamic-txts {
-    height: 70px;
-    line-height: 70px;
-  }
+@media (max-width: 768px) {
+    nav ul {
+        display: block;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
 }
 
 @media (max-width: 480px) {
-  label.logo {
-    font-size: 25px;
-    padding: 0 20px;
-  }
-
-  nav #icon {
-    margin-right: 10px;
-  }
-
-  .wrapper {
-    flex-direction: column;
-  }
-
-  .wrapper .static-txt, .dynamic-txts li {
-    font-size: 30px;
-  }
-
-  .wrapper .dynamic-txts {
-    margin-left: 0;
-    height: 50px;
-    line-height: 50px;
-  }
+    nav .logo {
+        font-size: 20px;
+    }
+    nav .logo span {
+        font-size: 14px;
+    }
+    .static-txt,
+    .dynamic-txts li {
+        font-size: 18px;
+    }
 }
-
-@media (max-width: 320px) {
-  label.logo {
-    font-size: 20px;
-  }
-
-  .wrapper .static-txt, .dynamic-txts li {
-    font-size: 25px;
-  }
-
-  .wrapper .dynamic-txts {
-    height: 40px;
-    line-height: 40px;
-  }
-  }
 
 
